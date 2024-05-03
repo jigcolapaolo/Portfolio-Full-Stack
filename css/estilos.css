@@ -455,7 +455,7 @@ b {
 
 .skills-content {
     grid-template-columns: repeat(2, max-content);
-    column-gap: 4rem;
+    column-gap: 5rem;
     justify-content: center;
     align-items: baseline;
     background-color: var(--body-color);
@@ -465,11 +465,41 @@ b {
 
 .skills-group {
     row-gap: 1rem;
+    justify-self: center;
+    flex-wrap: wrap;
 }
 
-.skills-item img {
+.skills-item img, .skills-item p {
     animation: levitate 2s ease-in-out infinite;
 }
+
+
+.tooltip-container {
+    position: relative;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
 
 @keyframes levitate {
     0%, 100% {
@@ -800,6 +830,7 @@ b {
     .services-card {
         padding-block: 1.5rem;
     }
+
 }
 
 /* Pantallas medianas */
@@ -892,7 +923,7 @@ b {
 
     .skills-content {
         row-gap: 3rem;
-        grid-template-columns: repeat(1, max-content)
+        grid-template-columns: repeat(1, max-content);
     }
 
     .skills-group {
@@ -946,7 +977,7 @@ b {
     .projects-description {
         visibility: visible;
         max-height: 1000px;
-        /* Tener en cuenta el width del projects-dig-img */
+        /* Tener en cuenta el width del projects-div-img */
         width: 140%;
         border-radius: 1rem;
     }
@@ -1009,7 +1040,8 @@ b {
 
     .skills-content {
         row-gap: 3rem;
-        grid-template-columns: repeat(1, max-content)
+        grid-template-columns: repeat(1, max-content);
+        width: 110%;
     }
 
     .skills-group {
